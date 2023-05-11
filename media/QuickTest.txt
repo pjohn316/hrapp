@@ -1,0 +1,67 @@
+Database
+
+Terms
+-id
+-name
+
+
+Subject Master
+-id
+-subject name
+-term_id
+-created_at
+
+
+Faculty
+-id
+-name
+-email
+-created_at
+
+FacultyTimeTable
+-id
+-faculty_id
+-subject_id
+-date
+-session_start_time
+-session_stop_time
+-duration
+-created_at
+
+
+
+1.. Terms will be fix in the database, [Term -1 , Term -2, Term-3 ,Term-4 ,Term-5]
+2.. Create a view to Add Subjects 
+	2.1 -- User will enter Subject Name and Select Term id from drop down
+	2.2 -- Term drop down will take the values from database - (Terms)
+	2.3 -- Add jQuery Validations for Name field - Feild should not be empty and greater than 200 characters
+	2.4 -- Save the Date in Data base and created_at field will have current date and time.
+3.. Create a view to List Subjects, which will have a button at the top to "Add subject" - Link this button to above created page
+
+Note.. Do not wast time in created update and delete page, I do not require it.
+
+4.. Create a new page Faculty Same as Subjects. , there will be no dropdown.. You just need to take name and email of the faculty 
+	when you save the faculty, you need take current date and time in created_at field
+
+Note.. Do not wast time in created update and delete page, I do not require it.
+
+5. Create a Page "Add Faculty Time Table"
+	5.1 This page can add multiple faculty time table at the same time. 
+	5.2 You will need to create a tabular view with + - buttons to add and remove rows
+	5.3 Each row will have following fields
+		 --Select Faculty -- Dropdown
+		 --Select Subject -- Dropdown
+		 --Select Session Date --Date picker
+		 --Select Session Date --Date picker
+		 --Select Session Start Time - Time picker
+		 --Select Session End Time -- Time picker
+		 --Duration
+
+	5.4. Validations should be
+		-- Stop time should not be less than the start time
+		-- Start time of one row should not be same as start time of another row if the date is same.
+		-- if Session Duration is for e.g 60 min.. then another any row should not have time inbeetween that duration in the same date.
+	5.6 Save in Database
+
+6. Create a List view of all entries in timetable.
+7. Create a Calendar view of all entries in timetable.
